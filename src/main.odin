@@ -9,9 +9,7 @@ window_h :: 720
 
 
 main :: proc() {
-    fmt.println("Starting Project...")
-
-
+    fmt.println("Program starting...")
 
     sapp.run({
         width = window_w,
@@ -19,4 +17,7 @@ main :: proc() {
         window_title = "game2",
         icon = { sokol_default = true },
     })
+
+    fmt.println("Program closing...")
+
 }
