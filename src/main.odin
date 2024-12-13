@@ -17,8 +17,8 @@ import slog "../sokol/log"
 import sglue "../sokol/glue"
 
     
-window_w :: 1280
-window_h :: 720
+window_w :: 640
+window_h :: 480
 
 state: struct {
     pip: sg.Pipeline,
@@ -37,9 +37,9 @@ init :: proc "c" () {
 
     vertices := [?]f32 {
         // Positions        RGBA
-         0.0,  0.5, 0.5,      1.0, 0.0, 0.0, 1.0,
-         0.5, -0.5, 0.5,      0.0, 1.0, 0.0, 1.0,
-        -0.5, -0.5, 0.5,      0.0, 0.0, 1.0, 1.0,
+        -0.5, -0.5, 0.0,    1.0, 0.0, 0.0, 1.0,
+         0.5, -0.5, 0.0,    0.0, 1.0, 0.0, 1.0,
+         0.0,  0.5, 0.0,    0.0, 0.0, 1.0, 1.0,
     }
 
     state.bind.vertex_buffers[0] = sg.make_buffer({
@@ -58,7 +58,7 @@ init :: proc "c" () {
 
     state.pass_action = {
         colors = {
-            0 = { load_action = .CLEAR, clear_value = { r = 0.4, g = 0.2, b = 0.3, a = 1}},
+            0 = { load_action = .CLEAR, clear_value = { r = 0.267, g = 0.2, b = 0.333, a = 1}},
         },
     }
 }
