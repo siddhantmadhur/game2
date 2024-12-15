@@ -1,0 +1,1 @@
+./sokol-shdc -i src/triangle.glsl -o src/triangle.shader.odin --slang glsl430 -f sokol_odin 
